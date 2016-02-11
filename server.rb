@@ -2,6 +2,7 @@ require 'pry'
 require 'sinatra'
 require 'nokogiri'
 require 'open-uri'
+require 'sinatra/reloader'
 
 class Application<Sinatra::Base
 	get '/' do 

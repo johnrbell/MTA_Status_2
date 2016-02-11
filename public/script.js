@@ -37,19 +37,19 @@
 	$.each($('.smallstatus'),function(){
 		switch($(this).text()) {
 			case 'PLANNED WORK':
-				$(this).text('effing work.')
+				$(this).text('planned work.')
 				break;
 			case 'SERVICE CHANGE':
 				$(this).text('service change.')
 				break;
 			case 'DELAYS':
-				$(this).text('effing delays.')
+				$(this).text('fucking delays.')
 				break;
 			case 'GOOD SERVICE':
 				$(this).text('all good.')
 				break;
 			default:
-				$(this).text('probably effed.')
+				$(this).text('probably fucked.')
 				break;
 		}
 	})
