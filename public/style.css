@@ -1,0 +1,116 @@
+html, body{
+	margin: 0px;
+	padding: 0px;
+	font-family:"Helvetica Neue", "Arial";
+	color: white;
+	overflow: hidden;
+	color: #fff;
+	width: 100%;
+	height: 100%;
+}
+
+
+/*TRAIN STUFF*/
+/*TRAIN STUFF*/
+/*TRAIN STUFF*/
+.container{
+	width: 900px;
+	padding-left: auto;
+	padding-right: auto;
+}
+.trainname{/*CIRCLES*/
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 55px;
+}
+.letter{/*LETTER IN THE CIRCLE*/
+	width: 60px;
+	font-size: 40px;
+	position: absolute;
+	background-color: transparent;
+	padding-top: 5px;
+	font-weight: bold;
+}
+.smallstatus{/*STATUS FOR EACH CIRCLE*/
+	position: absolute;
+	font-size: 14px;
+	color: #fff;
+	height: 20px;
+	padding-top: 65px;
+	width: 80px;
+	margin-left: -10px;
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.header{/*HEADER CONTAINER*/
+	text-align: center;
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 0;
+}
+.header h1{/*PAGE TITLE*/
+	font-size: 90px;
+	line-height: 0px;
+	font-weight: lighter;
+}
+.header h2{/*SUBTITLE*/
+	font-size: 30px;
+	line-height: 30px;
+	font-weight: lighter;
+}
+.screen{
+	height:100%;
+	width: 100%;
+	top: 0;
+	background-color: #222;
+	opacity: .7;
+	position: absolute;
+	z-index: -1;
+}
+.bg{
+	height:100vh;
+	width: 100vw;
+	background-color: #222;
+	background: url("/nyc.jpg");
+	background-size: cover;
+	background-position: center;
+	z-index: -1;
+	top: 0;
+	position: absolute;
+  text-align: center;
+}
+section span {
+  display: table-cell;
+  vertical-align: middle;
+}
+.spacer{
+	content: "";
+	width: 100px;
+	height: 50px;
+}
