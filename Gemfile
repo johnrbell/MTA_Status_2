@@ -5,5 +5,5 @@ source "https://rubygems.org"
 gem 'pry'
 gem 'sinatra'
 gem 'nokogiri'
-gem 'open-uri'
-gem 'sinatra/reloader'
+# gem 'open-uri'
+# gem 'sinatra/reloader'
