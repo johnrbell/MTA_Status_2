@@ -2,11 +2,10 @@ require 'pry'
 require 'sinatra'
 require 'nokogiri'
 require 'open-uri'
-# require 'sinatra/reloader'
+require 'sinatra/reloader'
 
 class Application<Sinatra::Base
 	get '/' do 
-		puts 'hiya'
 		group_count = 10 #this is how many train groups the xml file has. i.e. ABC is one group.
 		@final_hash = {}
 
