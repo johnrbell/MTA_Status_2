@@ -3,9 +3,14 @@ GEM
   specs:
     backports (3.6.7)
     coderay (1.1.0)
+    httparty (0.13.7)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
+    json (1.8.3)
     method_source (0.8.2)
     mini_portile2 (2.0.0)
     multi_json (1.11.2)
+    multi_xml (0.5.5)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
     pry (0.10.3)
@@ -35,6 +40,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  httparty
   nokogiri
   pry
   sinatra

@@ -8,6 +8,33 @@ html, body{
 	width: 100%;
 	height: 100%;
 }
+.screen{/*SCREEN MASK FOR BG*/
+	height:100%;
+	width: 100%;
+	top: 0;
+	background-color: #222;
+	opacity: .7;
+	position: absolute;
+	z-index: -1;
+}
+.bg{/*BACKGROUND IMAGE*/
+	height:100vh;
+	width: 100vw;
+	background-color: #222;
+	background: url("/nyc.jpg");
+	background-size: cover;
+	background-position: center;
+	z-index: -1;
+	top: 0;
+	position: absolute;
+  text-align: center;
+}
+
+
+
+
+
+
 
 
 /*TRAIN STUFF*/
@@ -45,19 +72,16 @@ html, body{
 	margin-left: -10px;
 	text-align: center;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
+.uberstatus{/*STATUS FOR EACH CIRCLE*/
+	position: absolute;
+	font-size: 14px;
+	color: #fff;
+	height: 20px;
+	padding-top: 65px;
+	width: 80px;
+	margin-left: -10px;
+	text-align: center;
+}
 
 
 
@@ -84,33 +108,18 @@ html, body{
 	line-height: 30px;
 	font-weight: lighter;
 }
-.screen{
-	height:100%;
-	width: 100%;
-	top: 0;
-	background-color: #222;
-	opacity: .7;
-	position: absolute;
-	z-index: -1;
-}
-.bg{
-	height:100vh;
-	width: 100vw;
-	background-color: #222;
-	background: url("/nyc.jpg");
-	background-size: cover;
-	background-position: center;
-	z-index: -1;
-	top: 0;
-	position: absolute;
-  text-align: center;
-}
-section span {
-  display: table-cell;
-  vertical-align: middle;
-}
-.spacer{
+.spacer{/*SPACE BETWEEN HEADER AND CIRCLES */
 	content: "";
 	width: 100px;
 	height: 50px;
 }
+
+
+@media (max-width: 600px) {
+  
+}
+
+
+
+
+

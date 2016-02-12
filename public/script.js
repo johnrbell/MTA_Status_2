@@ -1,6 +1,8 @@
 "use strict";
 
 (function(){
+
+	// each to give the trains color for their circles. 
 	$.each($('.trainname'),function(){
 		switch($(this).children('.letter').text()[0]) {
 			case '1': case '2':	case '3':
@@ -34,6 +36,7 @@
 		}
 	})
 
+	// each to replace the MTA status text with my own status text. 
 	$.each($('.smallstatus'),function(){
 		switch($(this).text()) {
 			case 'PLANNED WORK':
