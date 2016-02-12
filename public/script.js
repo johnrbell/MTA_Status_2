@@ -2,6 +2,20 @@
 
 (function(){
 
+	// this is the code to fix the bg jumping 
+	// when the android search box disappears.
+	var bg = $(".bg, .screen");
+	$(window).resize("resizeBackground");
+	function resizeBackground() {
+		bg.height($(window).height()+60);
+	}
+	resizeBackground();
+
+
+
+
+
+
 	// each to give the trains color for their circles. 
 	$.each($('.trainname'),function(){
 		switch($(this).children('.letter').text()[0]) {
