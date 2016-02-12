@@ -40,7 +40,7 @@ html, body{
 /*TRAIN STUFF*/
 /*TRAIN STUFF*/
 .container{
-	width: 75%;
+	width: 90%;
 	padding-left: auto;
 	padding-right: auto;
 }
@@ -82,18 +82,19 @@ html, body{
 .header{/*HEADER CONTAINER*/
 	text-align: center;
 	width: 100%;
-	height:auto;
+	height:100px;
 	margin-top: 10px;
 	margin-bottom: 10px;
+
 	padding: 0;
 }
 .header h1{/*PAGE TITLE*/
-	font-size: 8vw;
+	font-size: 90px;
 	line-height: 0px;
 	font-weight: lighter;
 }
 .header h2{/*SUBTITLE*/
-	font-size: 4vw;
+	font-size: 30px;
 	line-height: 30px;
 	font-weight: lighter;
 }
