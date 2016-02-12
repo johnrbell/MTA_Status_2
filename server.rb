@@ -19,6 +19,10 @@ class Application<Sinatra::Base
 		status.map! do |train| train = train.text.to_s end #reduces to simple array. 
 		work_hash = Hash[trains.zip status] #merges two arrays to one hash.
 
+		work_hash = work_hash.to_a #turns hash into an array
+		work_hash.insert(8, work_hash.delete_at(5)) #moves the g train to the end of the list, but before s.
+
+		# binding.pry
 		work_hash.each do |train,status| #split multiple trains to individual 
 			train.length.times do |i| 
 				@final_hash[train[i]] = status #new hash, each train alone
