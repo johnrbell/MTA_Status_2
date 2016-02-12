@@ -3,10 +3,9 @@ html, body{
 	padding: 0px;
 	font-family:"Helvetica Neue", "Arial";
 	color: white;
-	overflow: hidden;
-	color: #fff;
-	width: 100%;
-	height: 100%;
+	scroll-behavior: none;
+	/*width: 100%;*/
+	/*height: 100%;*/
 }
 .screen{/*SCREEN MASK FOR BG*/
 	height:100%;
@@ -14,19 +13,19 @@ html, body{
 	top: 0;
 	background-color: #222;
 	opacity: .7;
-	position: absolute;
+	position: fixed;
 	z-index: -1;
 }
 .bg{/*BACKGROUND IMAGE*/
-	height:100vh;
-	width: 100vw;
+	height:100%;
+	width: 100%;
 	background-color: #222;
 	background: url("/nyc.jpg");
 	background-size: cover;
 	background-position: center;
 	z-index: -1;
 	top: 0;
-	position: absolute;
+	position: fixed;
   text-align: center;
 }
 
@@ -72,17 +71,6 @@ html, body{
 	margin-left: -10px;
 	text-align: center;
 }
-.uberstatus{/*STATUS FOR EACH CIRCLE*/
-	position: absolute;
-	font-size: 14px;
-	color: #fff;
-	height: 20px;
-	padding-top: 65px;
-	width: 80px;
-	margin-left: -10px;
-	text-align: center;
-}
-
 
 
 
@@ -94,8 +82,10 @@ html, body{
 .header{/*HEADER CONTAINER*/
 	text-align: center;
 	width: 100%;
+	height:100px;
 	margin-top: 10px;
 	margin-bottom: 10px;
+
 	padding: 0;
 }
 .header h1{/*PAGE TITLE*/
@@ -108,12 +98,22 @@ html, body{
 	line-height: 30px;
 	font-weight: lighter;
 }
-.spacer{/*SPACE BETWEEN HEADER AND CIRCLES */
-	content: "";
-	width: 100px;
-	height: 50px;
-}
 
+
+
+@media screen and (max-width: 600px) {
+	body{
+	}
+  .header h1{
+  	font-size: 50px;
+  }
+  .header h2{
+  	font-size: 30px;
+  }
+  .container{
+  	width:100%;
+  }
+}
 
 
 
