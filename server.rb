@@ -4,8 +4,6 @@ require 'nokogiri'
 require 'open-uri'
 require 'sinatra/reloader'
 
-
-
 class Application<Sinatra::Base
 	get '/' do #get all trains
 		@final_hash = get_train_data
@@ -13,10 +11,11 @@ class Application<Sinatra::Base
 	end
 
 	get '/:train' do |n| #get a single train
-		@final_hash = get_train_data
-		if @final_hash[n.upcase]
-			@single_train[n.upcase] = @final_hash[n.upcase]
-			erb :single
+		working_hash = get_train_data
+		@final_hash = {}
+		if working_hash[n.upcase]
+			@final_hash[n.upcase] = working_hash[n.upcase]
+			erb :index
 		else
 			"<center>Sorry, but this train does not exist.</center>"
 		end
@@ -26,7 +25,6 @@ class Application<Sinatra::Base
 	def get_train_data #this gets the train data and puts it into a simple, usable hash. 
 		group_count = 10 #this is how many train groups the xml file has. i.e. ABC is one group.
 		@final_hash = {} #blank hash for final ouput
-		@single_train = {}
 
 		data = Nokogiri::XML(open('http://web.mta.info/status/serviceStatus.txt')) #opens xml file.
 		trains = data.xpath('//subway').xpath('//name').first(group_count) #gets X train names from xml
@@ -35,7 +33,6 @@ class Application<Sinatra::Base
 		trains.map! do |train| train = train.text.to_s end #reduces to simple array. 
 		status.map! do |train| train = train.text.to_s end #reduces to simple array. 
 		work_hash = Hash[trains.zip status] #merges two arrays to one hash.
-
 		work_hash = work_hash.to_a #turns hash into an array
 		
 		work_hash.each do |train,status| #split multiple trains to individual 
