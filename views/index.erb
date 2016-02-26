@@ -15,10 +15,14 @@
 		<div class="container">
 			<% @final_hash.each do |train,status,text| %>
 				<div class="trainname">
+				<a href=<%= train %>>
 					<div class="letter" id="<%= train.downcase %>"><%= train %></div>
 					<div class="smallstatus"><%= status %></div>
-					<div class="longstatus"><%= text %></div>
+				</a>
 				</div>
+				<% if text %>
+					<div class="longstatus"><%= text %></div>
+				<% end %>
 			<% end %>
 		</div>
 	</center>

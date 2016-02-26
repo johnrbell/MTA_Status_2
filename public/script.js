@@ -18,7 +18,7 @@
 
 	// each to give the trains color for their circles. 
 	$.each($('.trainname'),function(){
-		switch($(this).children('.letter').text()[0]) {
+		switch($(this).children('a').children('.letter').text()[0]) {
 			case '1': case '2':	case '3':
 					$(this).css('background-color','#EC000A')
 					break;
@@ -45,7 +45,7 @@
 					break;
 			case 'N':	case 'Q':	case 'R':
 					$(this).css('background-color','#FFD900'),
-					$(this).css('color','black')
+					$(this).children('a').css('color','black')
 					break;
 		}
 	})
@@ -73,5 +73,14 @@
 	
 	$('.plannedworkTableStyle').hide()
 	
+	while ($('.longstatus').children().last().is('br')){
+		$('.longstatus').children().last().remove()
+	}
+
+	if($('.longstatus').text()){
+	}else{
+		$('.longstatus').hide()		
+	}
+
 
 })();

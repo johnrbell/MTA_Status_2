@@ -105,11 +105,9 @@ html, body{
   .header h1{font-size: 90px}
   .header h2{font-size: 30px;}
 }
-
-
-
-
-
+a{
+	color: white;
+}
 
 
 
@@ -118,17 +116,15 @@ html, body{
 	text-align: center;
 	width: 80%;
 	height: auto;
-	font-size: 12px;
+	font-size: 14px;
 	background-color: rgba(0,0,0,.85);
 	border-radius: 10px;
 	padding-top: 50px;
 	padding-left: 10px;
 	padding-right: 10px; 
+	padding-bottom: 40px;
 	z-index: 9999;
   margin: 0;
-  position: absolute;
   top:250px;
   left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%)
 }

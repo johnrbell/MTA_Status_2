@@ -6,16 +6,17 @@ require 'sinatra/reloader'
 
 class Application<Sinatra::Base
 	get '/' do #get all trains
-		almost_final_hash = get_train_data
-		# binding.pry
-		almost_final_hash.each do |train|
-			train.pop
+		working_hash = get_train_data
+
+		working_hash.each do |train|
+			train.pop #pops off the last item for each train (the long status)
 		end
 		erb :index
 	end
 
 	get '/:train' do |n| #get a single train
 		working_hash = get_train_data
+		
 		almost_final_hash = []
 		@final_hash = []
 
@@ -42,20 +43,18 @@ class Application<Sinatra::Base
 		trains = data.xpath('//subway').xpath('//name').first(group_count) #gets X train names from xml
 		status = data.xpath('//subway').xpath('//status').first(group_count) #get X status for trains from xml
 		text = data.xpath('//subway').xpath('//text').first(group_count) #get X status for trains from xml
-		# binding.pry
 
 		trains.map! do |train| train = train.text.to_s end #reduces to simple array. 
 		status.map! do |train| train = train.text.to_s end #reduces to simple array. 
 		text.map! do |train| train = train.text.to_s end #reduces to simple array. 
 
-		work_hash = trains.zip(status,text)
+		work_hash = trains.zip(status,text) #zips the arrays together.
 
-		work_hash.each do |train,status,text| #split multiple trains to individual 
+		work_hash.each do |train,status,text| #split multiple trains to individual. ACE > A,C,E
 			train.length.times do |i|
-				@final_hash.push([train[i],status,text])
+				@final_hash.push([train[i],status,text]) #after split, push to new array. 
 			end
 		end
-		# binding.pry
 
 		return @final_hash #returns the hash. 
 	end
