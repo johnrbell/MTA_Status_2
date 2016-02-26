@@ -71,4 +71,7 @@
 		}
 	})
 	
+	$('.plannedworkTableStyle').hide()
+	
+
 })();

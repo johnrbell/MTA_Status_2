@@ -13,10 +13,11 @@
 			<h2>Subway, at a glance.</h2>
 		</div>
 		<div class="container">
-			<% @final_hash.each do |train,status| %>
+			<% @final_hash.each do |train,status,text| %>
 				<div class="trainname">
 					<div class="letter" id="<%= train.downcase %>"><%= train %></div>
 					<div class="smallstatus"><%= status %></div>
+					<div class="longstatus"><%= text %></div>
 				</div>
 			<% end %>
 		</div>

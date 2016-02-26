@@ -38,6 +38,7 @@ html, body{
 /*TRAIN STUFF*/
 /*TRAIN STUFF*/
 .container{
+	position: relative;
 	width: 90%;
 	max-width: 900px;
 	padding-left: auto;
@@ -108,3 +109,26 @@ html, body{
 
 
 
+
+
+
+
+/*for long status*/
+.longstatus{
+	text-align: center;
+	width: 80%;
+	height: auto;
+	font-size: 12px;
+	background-color: rgba(0,0,0,.85);
+	border-radius: 10px;
+	padding-top: 50px;
+	padding-left: 10px;
+	padding-right: 10px; 
+	z-index: 9999;
+  margin: 0;
+  position: absolute;
+  top:250px;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
